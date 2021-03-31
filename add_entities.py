@@ -21,8 +21,9 @@ project_id = os.getenv('GCLOUD_PROJECT')
 """
 Persists initial questions into datastore
 """
-def main():
 
+
+def main():
     """
     Create an array of dicts defining questions
     """
@@ -84,6 +85,7 @@ def main():
         for q_prop, q_val in q_info.items():
             q_entity[q_prop] = q_val
         client.put(q_entity)
+
 
 if __name__ == '__main__':
     main()
